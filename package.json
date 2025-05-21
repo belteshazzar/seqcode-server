@@ -1,0 +1,55 @@
+{
+  "name": "seqcode-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-files": "copy-files-from-to",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belteshazzar/seqcode-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belteshazzar/seqcode-server/issues"
+  },
+  "homepage": "https://github.com/belteshazzar/seqcode-server#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "entities": "^6.0.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "seqcode-web": "0.0.2",
+    "short-uuid": "^5.2.0"
+  },
+  "devDependencies": {
+    "copy-files-from-to": "^3.12.1"
+  },
+  "copyFiles": [
+        {
+            "from": "node_modules/seqcode/dist/example.seqcode",
+            "to": "public/diagrams/example.seqcode"
+        },
+        {
+            "from": "node_modules/seqcode-web/dist/index.html",
+            "to": "src/template.html"
+        },
+        {
+            "from": "node_modules/seqcode-web/dist/assets",
+            "to": "public/"
+        },
+        {
+            "from": "node_modules/seqcode-web/dist/css",
+            "to": "public/"
+        },
+        {
+            "from": "node_modules/seqcode-web/dist/img",
+            "to": "public/"
+        }
+    ]
+}

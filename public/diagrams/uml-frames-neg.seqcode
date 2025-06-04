@@ -1,0 +1,17 @@
+# Negative (neg) Frames
+# ---------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, A neg frame represents a part of the interaction that is not allowed or invalid in the system. It’s used to highlight interactions or sequences that should never happen. If the system encounters this situation, it would indicate an error or an exceptional condition. )
+
+# For example, in a payment system, a neg frame might show a scenario
+# where a "refund" is processed before the "payment" was completed,
+# which is not allowed.
+
+me : actor
+
+neg( This should never occur) {
+  show.refund()
+  shop.pay()
+}

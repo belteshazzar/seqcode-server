@@ -1,0 +1,19 @@
+# Design Pattern - Strategy
+# -------------------------
+
+note(450, 200, 300, The Strategy design pattern is a way to make your code flexible by allowing you to choose from different behaviors or algorithms at runtime. Instead of hardcoding the behavior into your objects, you put the behavior into separate classes, and your object picks which one to use. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+a : Client
+c : Context
+s1 : Strategy
+s2 : Strategy
+
+c.process( params ) {
+  alt( params == red ) {
+    s1.process()
+  }
+  alt( params == blue ) {
+    s2.process()
+  }
+}

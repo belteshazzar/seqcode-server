@@ -1,0 +1,20 @@
+# Break Frames
+# ------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, A break frame represents an alternative flow that interrupts the normal sequence of interactions. It’s used when something happens that causes the system to stop the current process and follow a different path. The condition for the break is written at the top of the frame in square brackets []. Once the break frame's actions are completed, the system does not return to the regular flow—it stops there. )
+
+me : actor
+
+# For example, in a login system, you might use a break frame to show what
+# happens if a user enters the wrong password. The system would display an
+# error message and stop the login process instead of continuing to grant
+# access.
+
+pause()
+computer.login() {
+  break( Wrong Password ) {
+    screen.display( Password is Incorrect )
+  }
+}

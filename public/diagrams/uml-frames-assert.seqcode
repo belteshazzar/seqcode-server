@@ -1,0 +1,18 @@
+# Assert Frames
+# -------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note(100,100,500, An assert frame is used to show a part of the interaction that must always be true for the system to work correctly. It ensures that the behavior inside the frame happens only if a specific condition is met. If the condition is not true, the interaction stops, and the system doesn’t proceed further. The condition is written at the top of the frame in square brackets []. )
+
+# For example, in an online store, you might use an assert frame to ensure
+# that "payment is successful" before proceeding to "ship the order." If
+# the payment isn’t successful, the shipping step won’t happen.
+
+me : actor
+
+shop.buyGame() {
+  assert( payment is successful ) {
+    warehouse.shipOrder()
+  }
+}

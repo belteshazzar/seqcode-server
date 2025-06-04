@@ -1,0 +1,72 @@
+# Software Design Patterns
+# ------------------------
+
+# Software design patterns are reusable, proven solutions to common challenges in
+# software development. Rather than being specific pieces of code, they serve as
+# adaptable templates or blueprints to address recurring design problems effectively.
+
+# Here's why design patterns matter:
+#
+# - Reusable Solutions: They offer pre-tested and reliable approaches to frequent
+#   software challenges.
+#
+# - Blueprints, Not Code: Think of design patterns as guidelines you can adapt to
+#   fit your project's needs.
+#
+# - Shared Vocabulary: They provide a common language for developers, simplifying
+#   communication and collaboration.
+#
+# - Established Best Practices: These patterns embody tried-and-true principles of
+#   software design.
+#
+# - Structured Problem-Solving: They help organize and streamline approaches to
+#   common issues, improving maintainability.
+
+# Design patterns bring a host of benefits to software development, including:
+#
+# - Efficiency: Save time by leveraging proven solutions instead of reinventing
+#   the wheel.
+#
+# - Team Collaboration: A shared understanding of design patterns enhances
+#   teamwork and communication.
+#
+# - Flexibility: Patterns are abstract and adaptable, making them suitable for a
+#   variety of project requirements.
+#
+# - Maintainability: Code implemented with design patterns is easier to read,
+#   modify, and maintain.
+#
+# - Improved Quality: Using design patterns fosters cleaner, more robust, and more
+#   reliable code.
+
+# By adopting design patterns, developers can create software that is efficient,
+# scalable, and easy to maintain. Whether you're tackling a new project or
+# refining an existing system, design patterns offer a valuable foundation for 
+# high-quality development.
+
+note(100, 10, 200, Abstract Factory | /diagrams/design-patterns-abstract-factory )
+note(100, 50, 200, Adapter | /diagrams/design-patterns-adapter )
+note(100, 90, 200, Bridge | /diagrams/design-patterns-bridge )
+note(100, 130, 200, Builder | /diagrams/design-patterns-builder )
+note(100, 170, 200, Chain of Responsibility | /diagrams/design-patterns-chain-of-responsibility )
+note(100, 210, 200, Command | /diagrams/design-patterns-command )
+note(100, 250, 200, Composite | /diagrams/design-patterns-composite )
+note(100, 290, 200, Decorator | /diagrams/design-patterns-decorator )
+note(100, 330, 200, Facade | /diagrams/design-patterns-facade )
+note(100, 370, 200, Factory Method | /diagrams/design-patterns-factory-method )
+note(100, 410, 200, Flyweight | /diagrams/design-patterns-flyweight )
+note(100, 450, 200, Interpreter | /diagrams/design-patterns-interpreter )
+note(100, 490, 200, Iterator | /diagrams/design-patterns-iterator )
+
+note(320, 10, 200, Mediator | /diagrams/design-patterns-mediator )
+note(320, 50, 200, Memento | /diagrams/design-patterns-memento )
+note(320, 90, 200, Null Object | /diagrams/design-patterns-null-object )
+note(320, 130, 200, Object Pool | /diagrams/design-patterns-object-pool )
+note(320, 170, 200, Observer | /diagrams/design-patterns-observer )
+note(320, 210, 200, Prototype | /diagrams/design-patterns-prototype )
+note(320, 250, 200, Proxy | /diagrams/design-patterns-proxy )
+note(320, 290, 200, Singleton | /diagrams/design-patterns-singleton )
+note(320, 330, 200, State | /diagrams/design-patterns-state )
+note(320, 370, 200, Strategy | /diagrams/design-patterns-strategy )
+note(320, 410, 200, Template Method | /diagrams/design-patterns-template-method )
+note(320, 450, 200, Visitor | /diagrams/design-patterns-visitor )

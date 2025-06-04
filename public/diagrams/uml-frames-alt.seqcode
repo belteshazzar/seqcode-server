@@ -1,0 +1,17 @@
+# Alternative (alt) Frames
+# ------------------------
+
+dev : actor
+barista : actor
+barkeep : actor
+
+ref( Frames | /diagrams/uml-frames )
+
+alt(Before 5pm) {
+  barista.get(coffee)
+}
+alt(5pm or after) {
+  barkeep.get(beer)
+}
+
+note( 100, 90, 400, An alt frame is a combined fragment used to model alternative, mutually exclusive flows of messages between objects or lifelines. The "alt" operator stands for "alternative" and is used when there are two or more possible paths that can be taken, but only one will execute based on a given condition. )

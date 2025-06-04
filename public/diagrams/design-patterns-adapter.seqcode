@@ -1,0 +1,22 @@
+# Design Pattern - Adapter
+# ------------------------
+
+note(400, 110, 300, The Adapter design pattern acts like a "translator" between two things that don’t naturally work together. It’s used when you have a piece of code (or object\) that you want to use, but its interface (how it works\) is not compatible with the code you already have. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+a : Adapter
+o : Adaptee
+
+a.request(request) {
+  convertRequest(request) {
+    return(o_request)
+  }
+  o.request(o_request) {
+    return(o_response)
+  }
+  convertResponse(o_response) {
+    return(response)
+  }
+  return(response)
+}

@@ -1,0 +1,16 @@
+# Reference (ref) Frames
+# ----------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, A ref frame (short for "reference frame"\) is used to connect or refer to another sequence diagram or a part of a diagram. It helps keep diagrams simple by breaking a big, complex interaction into smaller, easier-to-understand pieces. The ref frame shows that at this point, the system follows the steps described in the other referenced diagram.)
+
+# For example, in a shopping app, a ref frame might point to a 
+# separate diagram that shows the detailed process of "payment 
+# processing," so you don’t have to repeat all those steps in 
+# the main diagram.
+
+me : actor
+app.buy() {
+  ref(Process Payment | /diagrams/uml-frames-ref-process )
+}

@@ -1,0 +1,17 @@
+# Design Pattern - Facade
+# -----------------------
+
+note(300, 100, 300, The Facade design pattern is like a simple front door that hides a complicated building behind it. It gives you an easy way to use a complex system by providing a simple interface. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+f : Facade
+a : System
+b : System
+d : System
+
+f.get() {
+  a.get()
+  b.notify()
+  d.store()
+}

@@ -1,0 +1,22 @@
+# Design Pattern - Composite
+# --------------------------
+
+note(300, 3, 300, The Composite design pattern helps you treat a group of objects and a single object the same way. It’s useful when you have things made of parts, and those parts can also be groups. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+a : Composite
+pa : PartA
+pb : PartB
+pc : PartC
+
+a.create() {
+  pa.create()
+  pb.create()
+  pc.create()
+}
+
+a.action() {
+  pa.actionA()
+  pb.actionB()
+}

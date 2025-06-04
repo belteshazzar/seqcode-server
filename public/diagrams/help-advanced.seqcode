@@ -1,0 +1,32 @@
+# Help - Advanced
+# ---------------
+
+# Sometimes the automatical layout doesn't quite do what you
+# want and in these cases there are two special messages that
+# let you slightly alter the layout.
+
+me : actor
+fred: actor
+steve : actor
+
+# pause()
+# -------
+
+fred > get()
+steve > get()
+note(200,100,200,The activation box on fred doesn't end because it would occur under the message line to steve. Insert a pause(\) self message so that it can be drawn cleanly.)
+pause()
+fred > get() {
+  later() {
+    jamie > poke()
+  }
+}
+pause()
+steve > get()
+
+# later() {}
+# ----------
+
+# later allows you to put interactions on a life line after the context
+# has returned to another life line.
+note(300,280,220, poke(\) occurs on the life line of fred but after the get(\) activation has completed because it is wrapped in later(\) {}. )

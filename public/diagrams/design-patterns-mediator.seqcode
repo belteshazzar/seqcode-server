@@ -1,0 +1,20 @@
+# Design Pattern - Mediator
+# -------------------------
+
+note(350, 100, 300, The Mediator design pattern helps different parts of a program talk to each other through a central helper, instead of talking directly to each other. This makes communication simpler and keeps things organized. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+a : ComponentA
+m : Mediator
+b : ComponentB
+
+m.operation() {
+  b.operation() {
+    later() {
+      pause()
+      m.operation() {
+        a.operation()
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Design Pattern - Iterator
+# -------------------------
+
+note(300, 3, 300, The Iterator design pattern is a way to access elements in a collection (like a list or an array\) one by one, without exposing the collection’s internal details. It helps you go through all items easily and in order. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+a : Collection
+iter : Iterator
+
+a.getIterator() {
+  iter.create()
+  return(iter)
+}
+
+loop( More Items to Iterate Over ) {
+  iter.hasNext()
+  iter.getNext()
+  doThing()
+}

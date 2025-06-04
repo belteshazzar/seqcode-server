@@ -1,0 +1,26 @@
+# Critical Frames
+# ---------------
+
+ref( Frames | /diagrams/uml-frames )
+
+
+note( 100, 90, 450, A critical frame represents a block of interactions that must be completed without any interruptions. It’s used to show that the actions inside the frame need to happen as a single, uninterrupted sequence to ensure correctness, like a "do not disturb" zone for interactions. This is especially important when multiple processes might compete for resources or when timing is critical. )
+
+# For example, in a banking system, transferring money from one
+# account to another could be shown inside a critical frame to 
+# make sure the withdrawal and deposit happen together without 
+# any interference.
+
+me : actor
+bank : Bank
+acc1 : Account
+acc2 : Account
+
+pause()
+
+bank.transfer(from: acc1, to: acc2) {
+  critical() {
+    acc1.withdraw(10)
+    acc2.deposit(10)
+  }
+}

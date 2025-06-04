@@ -1,0 +1,26 @@
+# Design Pattern - Flyweight
+# --------------------------
+
+note(300, 3, 300, The Flyweight design pattern helps save memory when you have many similar objects by sharing the common parts instead of creating full copies of each one. It’s like reusing things instead of making new ones every time. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+
+f : Factory
+
+a : FlyWeight
+b : FlyWeight
+
+f.get(keyA) {
+  a.create()
+  return(a)
+}
+
+f.get(keyA) {
+  return(a)
+}
+
+f.get(keyB) {
+  b.create()
+  return(b)
+}

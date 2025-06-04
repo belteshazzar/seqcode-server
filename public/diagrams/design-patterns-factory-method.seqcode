@@ -1,0 +1,21 @@
+# Design Pattern - Factory Method
+# -------------------------------
+
+note(300, 10, 300, Factory Method allows us to create objects from an specific subtype through a Factory class. This is especially useful when we don't know which subtype we are going to use at design-time, or when we want to delegate object creation logic to a Factory class. )
+note(3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+client : Client
+cf : ConcreteFactory
+p1 : ConcreteProductA
+p2 : ConcreteProductB
+
+pause()
+cf.createProductA() {
+    p1.create()
+    return(p1)
+}
+
+cf.createProductB() {
+    p2.create()
+    return(p2)
+}

@@ -1,0 +1,20 @@
+# Design Pattern - Chain of Responsibility
+# ----------------------------------------
+
+note( 364, 295, 300, The Chain of Responsibility design pattern is like a series of "handlers" that process a request one at a time until one of them can handle it. It’s useful when you want to pass a request through a sequence of objects without knowing which one will deal with it. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+h : Handler
+h2 : Handler
+h3 : Handler
+h4 : Hander
+
+h.handle(request) {
+  h2.handle(request) {
+    h3.handle(request) {
+      h4.handle(request) {
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+# Activation boxes
+# ----------------
+
+me : actor
+you : Class
+them : Class
+
+# What it represents:
+# - The period during which an object is "active" or "busy"
+# - When an object is executing a method, processing data, or performing some operation
+# - The duration of control focus on that particular object
+
+ref( Sequence Diagrams | /diagrams/uml-sequence-diagrams )
+you.start() {
+  them.get() {
+    you.check()
+  }
+}
+
+note(260,100,300,A UML sequence diagram activation box (also called an execution specification\) is a narrow rectangular box that appears on an object's lifeline to show when that object is actively executing code or processing a request.)
+
+# Key behaviors:
+# - Starts when the object receives a message and begins processing
+# - Ends when the object finishes processing and potentially sends a return message
+# - Can be nested - one activation box can contain others if the object calls other methods during its execution
+# - Multiple activation boxes can appear on the same lifeline for different method calls

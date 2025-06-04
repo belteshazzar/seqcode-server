@@ -1,0 +1,18 @@
+# Design Pattern - Prototype
+# --------------------------
+
+note(350, 70, 300, The Prototype design pattern is a way to create new objects by copying an existing object, called the prototype, instead of building a new one from scratch. It’s useful when making a new object is expensive or complicated, so copying saves time and effort. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+prototype : Object
+a : Object
+b : Object
+
+a.create() {
+  prototype.clone()
+}
+
+b.create() {
+  prototype.clone()
+}

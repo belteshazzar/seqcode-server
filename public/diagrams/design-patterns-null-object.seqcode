@@ -1,0 +1,22 @@
+# Design Pattern - Null Object
+# ----------------------------
+
+note(300, 3, 300, The Null Object design pattern is a way to avoid checking for "nothing" or null all over your code by providing a special object that does nothing but behaves like a normal object. Instead of using null to mean "no object," you use this "do-nothing" object to keep things simple and avoid errors. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+m : Store
+v1 : Value
+null : Value
+
+pause()
+m.get( value1 ) {
+  alt( value1 exists) {
+    v1.create()
+    return(v1)
+  }
+  alt( value1 does not exist) {
+    null.create()
+  }
+  return(value)
+}

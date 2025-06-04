@@ -1,0 +1,16 @@
+# Design Pattern - Command
+# ------------------------
+
+note(300, 30, 300, The Command design pattern is a way to turn actions or requests into objects, so they can be saved, passed around, or undone later. It’s like putting instructions into a "command card" that can be used whenever and however you want. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+c1 : Command
+c2 : Command
+
+c1.create()
+c2.create()
+  
+c1.execute()
+c2.execute()
+c1.execute()

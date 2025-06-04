@@ -1,0 +1,20 @@
+# Design Pattern - Singleton
+# --------------------------
+
+note(300, 30, 300, The Singleton design pattern ensures that a class has only one instance throughout the entire program and provides a way to access it. It’s useful when you need a single point of control for certain resources or operations. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+controller : Controller
+instance : Singleton
+
+controller.get() {
+  opt( instance == null ) {
+    instance.create()
+  }
+  return(instance)
+}
+
+controller.get() {
+  return(instance)
+}

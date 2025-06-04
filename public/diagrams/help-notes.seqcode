@@ -1,0 +1,20 @@
+# Help - Notes
+# ------------
+
+# note self-call will translate to a note when the parameters are correct
+note( 100, 20, 300, "note" is a special self-call that translates to a note when it has the correct parameter format: note( xPosition, yPosition, width, message \))
+
+# x,y,width need to be integers
+note(x,y,width,message)
+note( 100, 130, 300, x, y & width need to be integers )
+
+note( 130, 180, 50, There is no height! seqcode works that out for you by wrapping the text to the given width. )
+
+# Notes on seqcode.app can also be dragged and resized with
+# the mouse using the handles that appear when hovering.
+
+a : actor
+docs : Help
+docs.next() {
+  ref( Links | /diagrams/help-links )
+}

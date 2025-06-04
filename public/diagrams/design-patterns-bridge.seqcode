@@ -1,0 +1,13 @@
+# Design Pattern - Bridge
+# -----------------------
+
+note(360, 120, 300, The Bridge design pattern is a way to separate two pieces of code that can change independently, making your program more flexible and easier to maintain. It’s like having a "bridge" that connects two separate parts of your code so they can work together without being tightly linked. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+a : actor
+bridge : Abstraction
+i : Implementation
+
+bridge.doOperation() {
+  i.bespokeOperation()
+}

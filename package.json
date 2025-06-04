@@ -1,6 +1,6 @@
 {
   "name": "seqcode-server",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "src/server.js",
   "type": "module",
@@ -24,7 +24,7 @@
     "entities": "^6.0.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
-    "seqcode-web": "0.0.2",
+    "seqcode-web": "0.0.6",
     "short-uuid": "^5.2.0"
   },
   "devDependencies": {
@@ -51,5 +51,8 @@
             "from": "node_modules/seqcode-web/dist/img",
             "to": "public/"
         }
-    ]
+    ],
+  "copyFilesSettings": {
+    "whenFileExists": "overwrite"
+  }
 }

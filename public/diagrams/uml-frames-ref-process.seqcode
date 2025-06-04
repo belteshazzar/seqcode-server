@@ -1,0 +1,9 @@
+# Reference (ref) Frames
+# ----------------------
+
+frame (Process Payment) {
+
+ref( Ref Frames | /diagrams/uml-frames-ref )
+store.+payment()
+
+note( 180, 150, 200, This is the process payment diagram, click on "Ref Frames" frame to return to the previous diagram. )

@@ -134,3 +134,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+src/template.html
+public/assets
+public/css
+public/diagrams/example.seqcode
+public/img

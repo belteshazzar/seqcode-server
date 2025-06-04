@@ -1,0 +1,19 @@
+# Optional (opt) Frames
+# ---------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, An opt frame represents an optional interaction that happens only if a specific condition is true. It’s like an "if" statement in programming. The condition is written at the top of the frame in square brackets [], and the interactions inside the frame occur only if the condition is met. )
+
+# For example, in an e-commerce system, an opt frame might show
+# sending a "discount coupon" email, which happens only if the 
+# user has made a purchase above a certain amount.
+
+me : actor
+shop.buy(something) {
+  later() {
+    opt( Purchase > $100 ) {
+      me.sendDiscount()
+    }
+  }
+}

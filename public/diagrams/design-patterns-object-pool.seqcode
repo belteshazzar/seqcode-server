@@ -1,0 +1,27 @@
+# Design Pattern - Object Pool
+# ----------------------------
+
+note(300, 3, 300, The Object Pool design pattern helps manage a set of reusable objects so you don’t have to create and destroy them all the time. Instead of making a new object every time you need one, you take an object from the pool, use it, and then return it for others to use later. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+p : Pool
+
+o1 : Object
+o2 : Object
+
+pause()
+p.create() {
+  o1.create()
+}
+p.get() {
+  return(o1)
+}
+p.get() {
+  o2.create()
+  return(o2)
+}
+p.return(o1)
+p.get() {
+  return(o1)
+}

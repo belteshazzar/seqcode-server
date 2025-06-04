@@ -1,0 +1,20 @@
+# Design Pattern - State
+# ----------------------
+
+note(300, 150, 300, The State design pattern is used when an object behaves differently depending on its current state. Instead of using a lot of conditional logic to handle the behavior, you create separate classes for each state and switch between them as needed. This keeps your code clean and easy to manage. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+a : Client
+
+c : Context
+s1 : State
+s2 : State
+
+c.setState(s1)
+c.process() {
+  s1.process()
+}
+c.setState(s2)
+c.process() {
+  s2.process()
+}

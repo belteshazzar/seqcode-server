@@ -1,0 +1,14 @@
+# Design Pattern - Decorator
+# --------------------------
+
+note(250, 240, 300, The Decorator design pattern lets you add extra features to an object without changing its original code. It’s like wrapping the object in layers that add new abilities or behavior. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+d : Decorator
+o : Component
+
+d.operation() {
+  o.operation()
+  additionalAbility()
+}

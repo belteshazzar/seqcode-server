@@ -1,0 +1,9 @@
+# Diagram Frames
+# --------------
+
+frame( This diagram has a name ) {
+  
+  ref( Frames | /diagrams/uml-frames )
+
+  note( 100, 90, 300, A diagram frame is a box and label drawn around a whole diagram such as this one. It shows the title or name of the whole diagram. 
+}    

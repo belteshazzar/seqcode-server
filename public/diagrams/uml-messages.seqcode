@@ -1,0 +1,76 @@
+# Messages
+# --------
+
+# In UML sequence diagrams, there are several types of messages that can be
+# shown to represent different kinds of interactions between objects or actors.
+
+cust1 : actor
+bank : Bank
+bob : Teller
+acc1 : Account
+
+ref(Sequence Diagrams | /diagrams/uml-sequence-diagrams )
+
+# Synchronous Messages:
+# - Represented by a solid arrow with a filled arrowhead
+# - The sender waits for a response before continuing
+# - Most common type of message call
+bank.call(synchronous)
+note(300,200,400,Synchronous Messages are represented by a solid arrow with a filled arrowhead. The sender waits for a response before continuing.)
+pause()
+
+# Asynchronous Messages
+# - Represented by a solid arrow with an open arrowhead
+# - The sender doesn't wait for a response and continues execution
+# - Used for fire-and-forget operations or parallel processing
+bank>send(asyncronous)
+note(300,280,400,Asynchronous Messages are represented by a solid arrow with an open arrowhead. The sender doesn't wait for a response and continues execution.)
+pause()
+
+# Return Messages
+# - Represented by a dashed arrow with an open arrowhead
+# - Shows the response or return value from a synchronous call
+# - Often optional in diagrams as the return is implied
+bank.call() {
+  pause()
+  return(results)
+  note(300,360,400,Return Messages are represented by a dashed arrow with an open arrowhead. They show the response or return value from a synchronous call. Often optional in diagrams as the return is implied, seqcode always shows them for completeness. )
+}
+
+# Self Messages
+# - An arrow that starts and ends on the same lifeline
+# - Represents an object calling one of its own methods
+# - Shows internal processing or recursive calls
+
+call()
+cust1 > send()
+note(200,500,400,Self Messages are shown as an arrow that starts and ends on the same lifeline. They represent an object calling one of its own methods or sending itself messages.)
+
+# Create Messages
+# - Used to show object instantiation
+# - The arrow points to the object being created
+# - Often labeled with "create" or "new"
+acc1.create()
+note(550,650,200,Create Messages are used to show object instantiation)
+
+# Destroy Messages
+# - Indicates when an object is destroyed or goes out of scope
+# - Typically shown with an "X" at the end of the lifeline
+# - Less commonly used than other message types
+acc1.destroy()
+note(550,720,200,Destroy Messages indicate when an object is destroyed or goes out of scope. Typically shown with an "X" at the end of the lifeline. )
+
+# Found Messages
+# - Messages that come from outside the scope of the diagram
+# - The sender is unknown or not shown
+# - Represented with a filled circle at the start of the arrow
++found()
+note(200,770,200,Found Messages are messages that come from outside the scope of the diagram.)
+pause()
+
+# Lost Messages
+# - Messages sent to an unknown or external recipient
+# - The receiver is outside the diagram's scope
+# - Represented with a filled circle at the end of the arrow
+-lost()
+note(200,850,200,Lost Messages are messages sent to an unknown or external recipient. The receiver is outside the diagram's scope.)

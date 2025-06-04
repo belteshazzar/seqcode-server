@@ -1,0 +1,39 @@
+# Design Pattern - Abstract Factory
+# ---------------------------------
+
+note(300, 30, 300, Abstract Factory is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.)
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+client : Client
+af : AbstractFactory
+cf1 : ConcreteFactory1
+cf2 : ConcreteFactory2
+pa1 : ProductA1
+pa2 : ProductA2
+
+af.getFactory() {
+  alt(Executon Context = Production) {
+    cf1.create()
+  }
+  alt(Execution Context = Development) {
+    cf2.create()
+  }
+  return(factory)
+}
+
+af.createProductA() {
+  alt(Executon Context = Production) {
+    cf1.createProductA() {
+      pa1.create()
+      return(product)
+    }
+  }
+  alt(Execution Context = Development) {
+    cf2.createProductA() {
+      pa2.create()
+      return(product)
+    }
+  }
+  return(product)
+}
+

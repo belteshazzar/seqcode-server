@@ -1,0 +1,25 @@
+# Design Pattern - Proxy
+# ----------------------
+
+note(300, 3, 300, The Proxy design pattern is like a middleman that controls access to another object. Instead of working directly with the real object, you work with the proxy, which can add extra steps like checking permissions, delaying the work, or controlling access. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+f : Factory
+proxy : Object
+o : Object
+
+pause()
+
+f.getObject() {
+  o.create()
+  proxy.create()
+  proxy.setProxiedObject(o)
+  return(proxy)
+}
+
+proxy.operation() {
+  proxy.preOperation()
+  o.operation()
+  proxy.postOperation()
+}

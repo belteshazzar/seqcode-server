@@ -1,0 +1,22 @@
+# Design Pattern - Memento
+# ------------------------
+
+note(300, 3, 300, The Memento design pattern is like a "save button" for an object’s state. It lets you save the current state of an object so you can restore it later if needed, without exposing the object’s internal details. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+o : Component
+m : Memento
+s : Store
+
+o.change() {
+  m.create()
+}
+s.create()
+s.save(m)
+m.destroy()
+s.load() {
+  m.create()
+  return(m)
+}
+o.restore(m)

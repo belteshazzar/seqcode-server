@@ -1,0 +1,22 @@
+# Design Pattern - Template Method
+# --------------------------------
+
+note(300, 3, 300, The Template Method design pattern is a way to define the structure of an operation (or process\) in a base class while allowing some steps to be customized in subclasses. It’s like creating a recipe with fixed steps but leaving room for customization in specific parts. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+step1 : Method
+step2 : Method
+t : Template
+
+step1.create()
+step2.create()
+t.create(step1,step2)
+t.process() {
+  init()
+  doSteps() {
+    step1.execute()
+    step2.execute()
+  }
+  final()
+}

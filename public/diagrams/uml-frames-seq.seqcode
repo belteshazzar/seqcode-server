@@ -1,0 +1,21 @@
+# Weak Sequencing (seq) Frames
+# ----------------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 110, 500, The weak sequencing fragment (denoted “seq”\) encloses a number of sequences for which all the messages must be processed in a preceding segment before the following segment can start, but which does not impose any sequencing within a segment on messages that don’t share a lifeline.)
+
+# For example, in a login process, the seq frame might show checking
+# the username first, then verifying the password, and finally granting
+# access—all in that exact order.
+
+me : actor
+app.login() {
+  seq() {
+    usernameChecker > check()
+    pause()
+    passwordChecker > check()
+    pause()
+    accessChecker > grantAccess()
+  }
+}

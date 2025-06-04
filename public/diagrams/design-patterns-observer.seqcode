@@ -1,0 +1,20 @@
+# Design Pattern - Observer
+# -------------------------
+
+note(400, 250, 300, The Observer design pattern is a way to let one object (called the subject\) keep track of many other objects (called observers\) and automatically notify them when something changes. It’s like a subscription system where observers get updates without constantly asking. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+p : Subject
+o : Observer
+
+o.create()
+p.addObserver(o) {
+  later() {
+    change() {
+      loop(For Each Observer) {
+        o.notify(change)
+      }
+    }
+  }
+}

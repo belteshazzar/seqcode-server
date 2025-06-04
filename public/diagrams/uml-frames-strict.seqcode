@@ -1,0 +1,23 @@
+# Strict (strict) Frames
+# -----------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 160, 160, 550, A strict frame shows a group of interactions that represents a strict sequence of interactions—meaning the actions inside the strict frame happen one after the other in the exact order shown. No skipping or overlapping is allowed; each step must be completed before the next one begins. )
+
+# For example, in a login process, the seq frame might show checking
+# the username first, then verifying the password, and finally granting
+# access—all in that exact order.
+
+me : actor
+app.login() {
+  strict() {
+    usernameChecker > check()
+    pause()
+    passwordChecker > check()
+    pause()
+    accessChecker > grantAccess()
+  }
+}
+
+note(160, 520, 550, Ordering of messages is gauranteed on a single lifeline, the strict frame indicates that the ordering across all involved lifelines is also sequential with absolutely no parallelism or interleaving; every step follows the previous one without deviation.)

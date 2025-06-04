@@ -1,0 +1,37 @@
+# Help - Frames
+# -------------
+
+# All types of UML frames are supported:
+#
+# - alt *
+# - assert
+# - break
+# - consider
+# - critical
+# - ignore
+# - loop
+# - neg
+# - opt
+# - par *
+# - ref
+# - seq *
+# - strict *
+
+# Frames with * support multiple compartments when
+# after each other.
+
+self : Actor
+multipleCompartments : UML
+
+multipleCompartments.frames() {
+  alt( when happy ) {
+    woot()
+  }
+  alt( when frustrated) {
+    toot()
+  }
+}
+
+help.next() {
+  ref( Notes | /diagrams/help-notes )
+}

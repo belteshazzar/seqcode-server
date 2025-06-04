@@ -1,0 +1,28 @@
+# Design Pattern - Visitor
+# ------------------------
+
+note(450, 20, 300, The Visitor design pattern is a way to add new operations to objects without changing their structure or modifying their code. Instead of putting the logic inside the objects themselves, you "visit" them with a separate object (called a visitor\) that performs the operations. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+a : Client
+c : Collection
+e1 : Element
+e2 : Element
+v : Visitor
+
+pause()
+pause()
+
+v.create()
+c.accept(v) {
+  e1.accept(v) {
+    v.visit(this) {
+      e1.operation()
+    }
+  }
+  e2.accept(v) {
+    v.visit(this) {
+      e2.operation()
+    }
+  }
+}

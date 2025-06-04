@@ -1,0 +1,35 @@
+# Help - Basics
+# -------------
+
+# The intention of seqcode is for the sequence diagram to easily
+# fall out of simple code that is similar to a programming language.
+# Unlike similar tools the code does not describe the drawing, the 
+# drawing is a translation of the code.
+
+# All diagrams start in the context of the left most object, automatically
+# created if you don't define one.
+
+fred.say(hello) # fred is automatically created, "say" is a self-call
+
+# message parameters are in brackets which can be escaped
+bob.give( 5 dollars (US\) ) {
+  
+  # now in the context of bob
+  
+  # ">" is an asynchronous message (there is no return)
+  # message names can be quoted to include special characters
+  steve > "leave note"( hello ) {
+
+    # because this is in an asynchronous block it occurs latter
+    bob.phone( say: hello )
+  }
+
+  return ( status ) # return is used to define the result of a block
+}
+
+# explicit definition of an object lifeline after implicit definitions
+help : Document
+
+help.next() {
+  ref(Objects | /diagrams/help-objects )
+}

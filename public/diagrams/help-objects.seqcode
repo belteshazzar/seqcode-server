@@ -1,0 +1,28 @@
+# Help - Objects
+# --------------
+
+# Objects and lifelines can be explicity defined or are implicitly defined
+self : Actor
+f : Factory
+
+f.getNew() {
+  # implicitly created lifeline defaults to Object
+  obj.create()
+  return(obj)
+}
+
+obj.do()
+
+# create and destroy are special synchronous messages
+obj.destroy()
+
+# actor, boundary, control, entity have special icons
+a : actor
+b : boundary
+c : control
+e : entity
+o : "Anything Else"
+
+o.next() {
+  ref( Frames | /diagrams/help-frames )
+}

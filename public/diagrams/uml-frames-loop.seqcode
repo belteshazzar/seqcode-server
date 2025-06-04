@@ -1,0 +1,19 @@
+# Loop Frames
+# -----------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, A loop frame represents a part of the interaction that repeats multiple times. It shows a looping process, like a "for" or "while" loop in programming. The condition for the loop is written at the top of the frame in square brackets [], and the interactions inside the frame are repeated as long as the condition is true. )
+
+# For example, in a file upload system, a loop frame could represent
+# the process of uploading files, repeating for each file in a list 
+# until all files are uploaded.
+
+me : actor
+
+pause()
+webpage.uploadFiles() {
+  loop( For Each Uploaded File ) {
+    fileSystem.saveFile()
+  }
+}

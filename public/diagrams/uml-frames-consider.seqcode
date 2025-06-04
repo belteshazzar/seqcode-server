@@ -1,0 +1,19 @@
+# Consider Frames
+# ---------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, A consider frame is used to highlight only specific messages or interactions that are important in a particular context. It tells the reader to focus only on the interactions listed inside the frame and temporarily ignore everything else in the sequence. This makes it easier to zoom in on the relevant parts of a complex process. )
+
+# For example, in a shopping cart system, a consider frame might
+# show just the interactions related to "applying discounts," while
+# ignoring the rest of the cart operations like adding or removing
+# items.
+
+me : actor
+pause()
+cart.addItem() {
+  consider( Apply Discounts ) {
+    price.increment(10)
+  }
+}

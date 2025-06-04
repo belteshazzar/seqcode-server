@@ -1,1 +1,56 @@
-uml
+# What is a Sequence Diagram?
+# ---------------------------
+
+# A Sequence Diagram is a type of Unified Modeling Language (UML) diagram that
+# illustrates how objects or components in a system interact with each other
+# over time. It focuses on the chronological sequence of messages exchanged
+# between system elements, such as classes, components, or actors. By capturing
+# the flow of communication, a sequence diagram provides a detailed view of the
+# order and timing of operations within a particular scenario or process.
+
+# Sequence diagrams are particularly useful for modeling the dynamic behavior
+# of a system—showing how various parts collaborate to complete a task or use
+# case.
+
+me : actor
+diagramParts : Diagram
+
+diagramParts.getInfo() {
+  ref( Life Lines | /diagrams/uml-life-lines )
+  ref( Activation Boxes | /diagrams/uml-activation-boxes )
+  ref( Messages | /diagrams/uml-messages )
+  ref( Frames | /diagrams/uml-frames )
+  ref( States and Invariants | /diagrams/uml-states )
+}
+
+# Understanding Dynamic Behavior
+# ------------------------------
+# They visually map out the step-by-step interactions between objects, making
+# it easier to understand how a system operates during runtime or under
+# specific scenarios.
+
+# Improved Communication
+# ----------------------
+# By providing a clear, graphical representation of object interactions,
+# sequence diagrams help stakeholders—including developers, designers, and
+# non-technical team members—grasp system behavior without needing to read
+# source code.
+
+# Use Case Analysis
+# -----------------
+# They effectively represent how a particular use case is executed, outlining
+# the roles of different components and the sequence of actions required to
+# complete a process.
+
+# System Design and Architecture
+# ------------------------------
+# Sequence diagrams support architectural decisions by showing how system
+# components or services communicate. This is especially valuable in designing
+# distributed systems, microservices, or service-oriented architectures (SOA).
+
+# System Documentation
+# --------------------
+# As part of technical documentation, sequence diagrams serve as a reference
+# for developers, testers, and maintenance teams, clarifying how different
+# parts of the system interact and ensuring consistency during future
+# development.

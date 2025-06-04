@@ -1,0 +1,20 @@
+# Parallel (par) Frames
+# ---------------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, a par frame shows that multiple interactions happen at the same time, in parallel. It means that different parts of the system are working together simultaneously, not one after the other. The interactions inside the par frame run independently and can overlap in time.)
+
+# For example, in a video streaming app, the system might load video
+# data while also buffering audio at the same time. The par frame 
+# helps show these actions happening together.
+
+me : actor
+app.play() {
+  par() {
+    video.buffer()
+  }
+  par() {
+    audio.buffer()
+  }
+}

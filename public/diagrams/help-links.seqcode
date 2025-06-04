@@ -1,0 +1,15 @@
+# Help - Links
+# ------------
+
+note(200,10,200, Notes and "ref" frames can be made clickable by adding links to the text after a bar "\|" )
+
+me : actor
+help : Document
+
+help.next() {
+  ref( Advanced | /diagrams/help-advanced )
+}
+
+note(200,100,200, Click here to go to advanced help. | /diagrams/help-advanced )
+
+note(200,200,200, Links are useful when embedding diagrams in other pages or editing diagrams in your own space. )

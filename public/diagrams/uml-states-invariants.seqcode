@@ -1,0 +1,29 @@
+# States and Invariants
+# ---------------------
+
+# States
+# - A state is like a condition or "mode" an object is in at a specific time.
+# - Example: A door object can be in the state "Open," "Closed," or "Locked."
+# - States are shown in state diagrams (special UML diagrams) or sometimes as
+#   notes in other UML diagrams.
+
+# Invariants
+# - An invariant is a rule or condition that must always be true for an object
+#   at a certain time.
+# - Example: A bank account's balance must never go below zero.
+# - In diagrams, invariants can be shown as notes with curly braces {} attached
+#   to objects or lifelines.
+
+me : actor
+door : Door
+
+ref(Sequence Diagrams | /diagrams/uml-sequence-diagrams )
+
+door.open() {
+state( Locked )
+  return(fail)
+}
+
+account.withdraw() {
+  invariant( Never < 0 )
+}

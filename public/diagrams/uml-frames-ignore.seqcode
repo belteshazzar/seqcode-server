@@ -1,0 +1,16 @@
+# Ignore Frames
+# -------------
+
+ref( Frames | /diagrams/uml-frames )
+
+note( 100, 90, 400, An ignore frame is used to tell the reader to temporarily ignore specific interactions or messages during a particular scenario. It highlights that those interactions don’t matter for the context being shown. The ignored messages are listed at the top of the frame. )
+
+me : actor
+e-commerce : System
+
+e-commerce.login() {
+  ignore(login, logout, performance) {
+    mail.sendPromotionalEmail()
+    log.logAnalytics()
+  }
+}

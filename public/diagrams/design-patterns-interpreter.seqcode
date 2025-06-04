@@ -1,0 +1,26 @@
+# Design Pattern - Interpreter
+# ----------------------------
+
+note(380, 30, 300, The Interpreter design pattern is a way to understand and process a language or set of rules by creating a system that reads and interprets sentences or commands. It breaks down the input into parts and figures out what each part means. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+c : Client
+context : Context
+
+e1 : Expression
+e2 : Expression
+e3 : Expression
+
+context.create()
+context.parse() {
+  e1.create() {
+    e2.create()
+  }
+  e3.create()
+}
+context.execute() {
+  e1.execute() {
+    e2.execute()
+  }
+  e3.execute()
+}

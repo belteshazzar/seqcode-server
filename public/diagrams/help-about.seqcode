@@ -1,0 +1,12 @@
+# Help - About
+# ------------
+
+you : actor
+seqcode : Website
+repo : Github
+
+seqcode.getPage( Help - About ) {
+  repo.visit() {
+    ref( More Information | https://github.com/belteshazzar/seqcode )
+  }
+}

@@ -1,0 +1,39 @@
+# Life Lines
+# ----------
+
+# A lifeline is a vertical dashed line that appears below a participant’s name
+# (usually inside a rectangle at the top). It shows the existence of that
+# participant over time, starting from the top (earlier in time) and extending
+# downward as time progresses.
+
+# Structure of a Lifeline
+# 
+# - Actor box (head): Contains the name of the object or actor.
+#
+# - Vertical dashed line: Represents the object’s presence throughout the
+#   interaction.
+#
+# - Executions bars (optional): Narrow rectangles over the lifeline that show
+#   when the object is performing an action or is active (e.g., executing a
+#   method). These are alternatively called: Activations or Invocations
+
+actor : actor
+boundary : boundary
+control : control
+entity : entity
+type : type
+
+object : "Life Line"
+
+ref(Sequence Diagrams | /diagrams/uml-sequence-diagrams )
+
+object.create()
+object.method(method parameters) {
+  return(method results)
+}
+object.destroy()
+
+note(460, 10, 200, The box or icon at the top of the life line shows the objects name and its class/classifier. )
+note(440, 120, 200, Actors/objects exist by default or can be created explicitly using the create message )
+note(570, 280, 200, Execution rectangles show the time taken to perform an action. )
+note(570, 370, 200, Cross shows the end of the actors life. )

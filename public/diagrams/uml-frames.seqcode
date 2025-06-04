@@ -1,0 +1,26 @@
+# Frames
+# ------
+
+# In UML sequence diagrams, a frame represents a boundary or container
+# that groups interactions and defines their scope.
+
+ref(Sequence Diagrams | /diagrams/uml-sequence-diagrams )
+
+me : actor
+
+docs.listFrameTypes() {
+  ref( alt (Alternatives\) | /diagrams/uml-frames-alt )
+  ref( assert (Assertion\) | /diagrams/uml-frames-assert )
+  ref( break | /diagrams/uml-frames-break )
+  ref( consider | /diagrams/uml-frames-consider )
+  ref( critical | /diagrams/uml-frames-critical )
+  ref( diagram | /diagrams/uml-frames-diagram )
+  ref( ignore | /diagrams/uml-frames-ignore )
+  ref( loop | /diagrams/uml-frames-loop )
+  ref( neg (Negative\) | /diagrams/uml-frames-neg )
+  ref( opt (Optional\) | /diagrams/uml-frames-opt )
+  ref( par (Parallel\) | /diagrams/uml-frames-par )
+  ref( ref (Reference\) | /diagrams/uml-frames-ref )
+  ref( seq (Weak Sequencing\) | /diagrams/uml-frames-seq )
+  ref( strict (Strict Sequencing\) | /diagrams/uml-frames-strict )
+}

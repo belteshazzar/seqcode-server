@@ -1,1 +1,11 @@
-404
+
+you : actor
+seqcode : Website
+
+seqcode.getPage() {
+  return(404 : Not Found)
+}
+
+seqcode.getPage() {
+  ref( Click here for the home page | /diagrams/example )
+}

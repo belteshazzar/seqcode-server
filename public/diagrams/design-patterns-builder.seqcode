@@ -1,0 +1,24 @@
+# Design Pattern - Builder
+# ------------------------
+
+note(400, 200, 300, The Builder design pattern helps you create complex objects step by step. Instead of making the object all at once, the builder allows you to construct it piece by piece, giving you more control and flexibility over the final result. )
+note( 3, 3, 250, Click here for all Design Patterns | /diagrams/design-patterns )
+
+d : Director
+b : Builder
+p : Product
+
+b.create() {
+  p.create()
+}
+b.color(red) {
+  p.setColor(red)
+  return(b)
+}
+b.border(wide) {
+  p.setBorder(wide)
+  return(b)
+}
+b.build() {
+  return(p)
+}

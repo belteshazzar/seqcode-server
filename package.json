@@ -24,7 +24,7 @@
     "entities": "^6.0.0",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
-    "seqcode-web": "0.0.6"
+    "seqcode-web": "0.0.8"
   },
   "devDependencies": {
     "copy-files-from-to": "^3.12.1"

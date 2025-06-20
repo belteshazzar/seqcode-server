@@ -5,9 +5,14 @@ import fs from 'node:fs'
 // import short from 'short-uuid'
 import {encode} from 'entities'
 
+// import.meta.dirname == undefined
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express()
 const port = process.argv[2] || -1
-const __dirname = import.meta.dirname;
 const DIAGRAMS_DIR = path.join(__dirname, '../public/diagrams/')
 // const UPLOADS_DIR = path.join(__dirname, '../public/uploads/')
 const template = fs.readFileSync(path.join(__dirname, "./template.html"),'utf8').split("\n---\n")

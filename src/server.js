@@ -6,7 +6,7 @@ import fs from 'node:fs'
 import {encode} from 'entities'
 
 const app = express()
-const port = 3000
+const port = process.argv[2] || -1
 const __dirname = import.meta.dirname;
 const DIAGRAMS_DIR = path.join(__dirname, '../public/diagrams/')
 // const UPLOADS_DIR = path.join(__dirname, '../public/uploads/')

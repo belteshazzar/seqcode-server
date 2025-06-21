@@ -2,6 +2,12 @@
 
 ## deployment setup notes
 
+ssh to server:
+
+```
+$ ssh -i "~/.ssh/MacBook.pem" ec2-user@52.64.31.37 
+```
+
 to run:
 
 ```
